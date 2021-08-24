@@ -1,0 +1,1175 @@
+
+/*formatage du texte*/
+
+@font-face 
+{ /*police du site*/
+    font-family: 'Raleway Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('police_raleway/Raleway-Regular.woff'), url('police_raleway/Raleway-Regular.woff') format('woff');
+} 
+
+*
+{
+    font-family:'Raleway Regular', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: x-large; /* taille du premier titre en haut du site */
+    list-style: none;
+}
+
+
+
+h2 
+{
+    font-size: large; /*taille des sous titres du corps de page*/
+    text-align: left;
+}
+
+h3 
+{
+    font-size: large; /*taille des sous titres de pied de page*/
+    font-weight: bold;
+}
+
+p
+{
+    font-size: medium; /*taille des paragraphes*/
+}
+
+body 
+{
+    margin: 0px;
+}
+
+header
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 0px 20px 0px 20px;
+}
+
+.menu 
+{   
+    display: grid;
+    grid-template-columns: 50% 20% 15% 15%;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 70px;
+  
+}
+
+.logo{grid-column: 1/2;  grid-row: 1/2; display: flex; align-items: center; margin-left: 10px; border: none;}
+.logo img:hover{ border: none;}
+.onglet:nth-child(2){ grid-column: 2/3;  grid-row: 1/2;}
+.onglet:nth-child(3){ grid-column: 3/4;  grid-row: 1/2;}
+.onglet:nth-child(4){ color: #0065FC;  grid-column: 4/5;  grid-row: 1/2;}
+.onglet
+{   
+    display: flex;
+    font-size: medium;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.onglet:nth-child(2):hover{  color: #0065FC; border-top: #0065FC solid;}
+.onglet:nth-child(3):hover{  color: #0065FC; border-top: #0065FC solid;}
+.onglet:nth-child(4):hover{color: #0065FC;  border-top: #0065FC solid;}
+
+
+
+.recherche /*partie recherche du bloc main*/
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: left;
+    width: 95%;
+    
+    
+}
+
+ .titre-recherche
+ {
+     margin-bottom: 10px;
+ }
+
+ .sous-titre-recherche 
+ {
+    
+     margin-top: 0px;
+ }
+
+.localisation
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    
+    margin-bottom: 5px;
+    margin-top: 0px;
+    
+}
+
+
+.bare-localisation img /*petite icone de localisation*/
+{
+    width: 20px;
+    height: 20px;
+    background-color: #F2F2F2 ;
+}
+
+.bare-localisation:nth-child(1)
+{   
+    border-radius: 10px 0px 0px 10px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #F2F2F2 ;
+    background-color: #F2F2F2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+
+}
+
+.bare-localisation:nth-child(2)
+{   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 0px 5px;
+    font-size: medium;
+    font-weight: bold;
+    border: 2px solid #F2F2F2;
+    height: 40px;
+    width: 200px;
+}
+
+.bare-localisation:nth-child(3) /*partie bleu qui inclut le texte recherche dans la barre de localisation*/
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    font-size: medium;
+    font-weight: bold;
+    border-radius: 0px 10px 10px 0px;
+    background-color: #0065FC;
+    height: 40px;
+    border: 2px solid #0065FC;
+    width: 120px;
+    color: white;
+}
+.icone-recherche
+{
+    display: none;
+}
+
+
+.Filtre  /*/section filtre en dessous de la bare de recherche séparé en 4 ensemble de filtre*/
+{
+    
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 0px;
+ 
+ 
+}
+
+.ensemble-filtre
+{
+    display: flex;
+    flex-flow:row-reverse;
+    justify-content: space-around;
+    align-items: center;
+  
+    border: #F2F2F2 solid;
+   
+    margin: 0px;
+    height: 40px;
+    padding: 0px;
+    border-radius: 20px;
+}
+
+.ensemble-filtre:nth-child(1)
+{   
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+    flex-basis: 100px;
+}
+
+.ensemble-filtre:nth-child(2){ flex-basis: 150px;}
+.ensemble-filtre:nth-child(3){ flex-basis: 145px;}
+.ensemble-filtre:nth-child(4){ flex-basis: 150px;}
+.ensemble-filtre:nth-child(5) { flex-basis: 200px;}
+
+.titre-filtre
+{
+    display: flex ;
+
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 20px;
+    width: 100%;
+    padding: 0px;
+    height: 25px;
+    font-size: medium;
+    font-weight: bold;
+  
+}
+
+
+
+.icone-filtre 
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding: 12px;
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+    color: #0065FC;
+    cursor: pointer;
+    background-color: #DEEBFF ; 
+    position: relative;
+    right: 2px;
+}
+
+
+.description-filtre
+{
+    
+    width: 100%;
+    
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: center;
+ 
+   
+    
+
+
+}
+
+.sous-titre
+{   
+    font-size: small;
+    color:gray;
+    margin-left: 5px;
+ 
+}
+
+.icone-filtre2
+{   
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    border: 1px solid #F2F2F2;
+    color: #0065FC;
+
+}
+
+
+main
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.hébergements /*bloc hébergements*/
+{   
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-around;
+    background: #F2F2F2;
+    border-radius: 20px;
+    width: 65%;
+    height: 650px;
+    margin-top: 30px;
+    margin-right: 5px ;
+    margin-bottom: 20px;
+    
+    
+    
+}
+
+.flex-lien
+{
+    align-self: flex-end;
+    justify-self: flex-start;
+    font-weight: bold;
+    width: 850px;
+    margin-left: 5px;
+    
+}
+
+
+
+.titre /*titre de la section hébergement*/
+{   
+    
+    height: 20px;
+    font-size: large;
+    width: 850px;
+    margin: 30px 0px 0px 30px;
+    padding: 0px;
+  
+
+}
+
+.carte
+{       
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60% 15% 15% 10%;
+        height: 210px;
+        width: 250px;
+        border: solid white;
+        margin: 0px ;
+        padding: 0px;
+        border-radius: 20px 20px 20px 20px;
+        background-color: white;
+        box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
+
+
+}
+
+
+
+.image-seul img /*modification de la tailledes images */
+{
+    width: 250px;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+
+}
+
+.image-seul /*$modification de la tailledes images */
+{
+    width: 250px;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    
+    
+}
+
+.titre-carte
+{   
+    font-size: medium;
+    padding-left: 5px;
+    font-weight: bold;
+
+}
+
+.titre-carte:nth-child(1){grid-column: 1/2; grid-row: 2/3;}
+.titre-carte:nth-child(2){grid-column: 1/2; grid-row: 2/3;}
+.titre-carte:nth-child(3){grid-column: 1/2; grid-row: 2/3;}
+
+.titre-carte:nth-child(4){grid-column: 1/2; grid-row: 2/3;}
+.titre-carte:nth-child(5){grid-column: 1/2; grid-row: 2/3;}
+.titre-carte:nth-child(6){grid-column: 1/2; grid-row: 2/3;}
+
+
+
+
+
+.prix
+{   
+    font-size: small;
+    padding-left: 5px;
+    
+}
+
+.prix:nth-child(1) {grid-column: 1/2; grid-row: 3/4;}
+.prix:nth-child(2){grid-column: 1/2; grid-row: 3/4;}
+.prix:nth-child(3){grid-column: 1/2; grid-row: 3/4;}
+.prix:nth-child(4){grid-column: 1/2; grid-row: 3/4;}
+.prix:nth-child(5){grid-column: 1/2; grid-row: 3/4;}
+.prix:nth-child(6){grid-column: 1/2; grid-row: 3/4;}
+
+
+.couleur-bleu
+{
+    color: #0065FC;
+}
+.couleur-gris
+{
+    color:gray;
+}
+
+.etoiles
+{   
+    display: flex;
+    flex-grow: row ;
+    justify-content: flex-start;
+    height: 10px;
+    align-items: center;
+    margin-left: 5px;
+
+}
+
+
+.aside1 /*bloc les plus populaires*/
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+   
+    width: 30%;
+    height: 650px;
+    margin-top: 30px;
+    margin-left: 5px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: #F2F2F2;
+    
+
+}
+
+.contenant-toutes-cartes
+{   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 530px;
+    align-content: space-between;
+    justify-content: space-around;
+   
+    margin: 0px 0px 5px 0px;
+}
+
+.contenant-carte-aside
+{
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-template-rows: 1fr ;
+
+    
+    padding: 0%;
+    margin: 0px;
+    height: 135px;
+    width: 350px;
+    background-color: white;
+    border-radius: 20px;
+    border: white solid;
+    box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
+
+}
+
+.images-seul2 img /*contenant des images*/
+{   
+    grid-row: 1/2;
+    grid-column: 1/2;
+    width: 150px;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.header-aside
+{   
+    width: 350px;
+    height: 20px;
+    margin: 25px 0px 0px 0px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    
+ 
+
+}
+
+.titre1 
+{
+    font-size: large;
+    height: 20px;
+    width: 350px;
+    padding:0px;
+    margin: 0px;
+}
+
+.titre-aside
+{   
+    margin-left: 20px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: medium;
+    font-weight: bold;
+    width: 170px;
+    padding: 5px;
+}
+
+.sous-titre-aside
+{   
+    margin-left: 25px;
+    margin-top: 50px;
+    grid-row: 1/2;
+    grid-column: 2/3;
+    font-size: small;
+}
+
+.etoiles-aside
+{   
+    display: flex;
+    height: 10px;
+    align-items: center;
+    margin: 80px 0px 0px 25px;
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+}
+
+
+.activites /*bloc activtités*/
+{
+margin: 20px  0px 50px  0px;
+width: 95%;
+height: 450px;
+
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+grid-template-rows: 10% 45% 45%;
+grid-column-gap: 20px;
+
+}
+
+.titre-2
+{   
+    
+    font-size: large;
+    font-weight: bold;
+    margin: 10px 0px 0px 0px;
+    padding-left: 5px;
+    grid-column: 1/2; 
+    grid-row: 1/2;
+}
+
+.titre-activites
+{
+    grid-row: 2/3;
+    grid-column: 1/2;
+    font-size: medium;
+    font-weight: bold ;
+    margin: 5px 0px 5px 15px;
+}
+
+.contenant-carte2
+{   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    
+    width: 300px;
+    height: 190px ;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 2px 4px 4px #F2F2F2 ;
+    padding: 0px;
+    margin: 0px;
+  
+}
+
+.contenant-carte2:nth-child(5) {grid-column: 4/5; grid-row: 3/4; margin-top: 5px}
+.contenant-carte2:nth-child(2) {grid-column: 4/5; grid-row: 2/3; }
+.contenant-carte2:nth-child(3) {grid-column: 2/3; grid-row: 3/4; margin-top: 5px} 
+.contenant-carte2:nth-child(4) {grid-column: 2/3; grid-row: 2/3; }
+
+.petite-image
+{   
+    
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 0px;
+    margin: 0px;
+   
+
+
+}
+
+.petite-image img
+{   
+    
+    width: 300px;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.contenant-carte3
+{   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90% 20%;
+    
+    width: 300px;
+    height: 400px ;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 2px 4px 4px #F2F2F2 ;
+    margin: 0px;
+}
+
+.grande-image
+{   
+    
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 0px;
+    margin: 0px;
+   
+
+
+}
+
+.grande-image img
+{   
+    
+    width: 300px;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.contenant-carte4
+{   
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90% 20%;
+    
+    width: 300px;
+    height: 400px ;
+    border-radius: 20px 20px 20px 20px;
+    box-shadow: 2px 4px 4px #F2F2F2 ;
+    margin: 0px
+}
+
+.grande-image
+{   
+    
+    grid-column: 1/2;
+    grid-row: 1/2;
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 0px;
+    margin: 0px;
+   
+
+
+}
+
+.grande-image img
+{   
+    
+    width: 300px;
+    height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    margin: 0px;
+    padding: 0px;
+}
+.contenant-carte3{grid-column: 3/4; grid-row: 2/3;}
+.contenant-carte4{grid-column: 1/2; grid-row: 2/4;}
+
+
+footer /*pied de page simple*/
+{
+    width: 100%;
+    height: 200px;
+    background: #F2F2F2;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    
+}
+
+
+.menu2 ul
+{
+    
+    padding: 0px;
+    font-size: small;
+    margin: 0px;
+}
+
+li
+{
+    font-size:medium;
+    padding: 0px;
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) /*/parti responsive pour les tablettes*/
+{   
+    body 
+    {
+        margin: 0px;
+    }
+    header
+    {
+        
+        margin: 0px;
+        align-items: center;
+        margin-bottom: 20px;
+
+    }
+
+    /*en tête du site partie menu changement de grille pour pouvoir faire a disposition tablette*/
+    .menu 
+    {   
+       
+        display: grid;
+        grid-template-rows: 50% 50%;
+        grid-template-columns: 50% 50%;
+        row-gap: 10px;
+       
+    }
+
+    .logo{ align-self: flex-start;  grid-column: 1/2; grid-row: 1/2;}
+    .onglet:nth-child(2){ grid-column: 1/2; grid-row: 2/3; border-bottom: #F2F2F2 solid; }
+    .onglet:nth-child(3){ grid-column: 2/3; grid-row: 2/3; border-bottom: #F2F2F2 solid; }
+    .onglet:nth-child(4){ grid-column: 2/3; grid-row: 1/2; justify-content: flex-end; border-top: none ; font-weight: bold; margin-right: 10px;}
+
+    .onglet:nth-child(2):hover { border-bottom: solid #0065FC; border-top: none ;} 
+    .onglet:nth-child(3):hover { border-bottom: solid #0065FC; border-top: none ;}
+    .onglet:nth-child(4):hover {border-top: none ;} /*disparition des bordures losque l'on passe au dessus en version tablette*/
+
+    /* partie de la bare de recherche  compléter par l'agrandissement de la taille du conteneur*/
+
+    
+    /*partie filtres passage en dessous des élément flexibles.*/
+
+    .Filtre
+    {   
+        display: flex;
+        align-content: space-between;
+        
+        width: 100%;
+        height: 100px;
+        margin-top: 0px;
+      
+    }
+
+    .ensemble-filtre:nth-child(1) /*on parle ici du l'item filtre qui ne comporte aucun icone dans le site*/
+    { 
+        display: flex; 
+        flex-basis: 100%;  
+        justify-content: flex-end;       
+    
+        align-items: center;
+        padding: 0px;
+    }
+    .titre-filtre1
+    {   
+        flex-basis: 300px;
+        justify-content: flex-start;
+    }
+
+ 
+
+    /* augmetaion de la hauteur  du conteneur pour permettre de contenir tous ls élèments dans le bloc*/
+   
+    .hébergements 
+    {
+        width: 95%;
+        height: 700px;
+        display: flex;
+        
+        order: 2;
+        margin-left: 0px;
+        margin-right: 0px;
+       
+    }
+    .titre
+    {   
+        width: 100%;
+        margin-bottom: 0px;
+      
+    }
+
+    .carte
+    {
+        margin-right: 30px;
+        margin-left: 30px;
+        margin-top: 0px;
+
+    }
+
+    /*partie a coté de la partie de la section hébergement qui va vraissemblament passer au dessus dans la partie responsive*/
+    .aside1
+    {   
+        display: flex;
+        justify-content: space-around;
+        align-content:space-around ;
+        width: 95%;
+        height: 650px;
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px 0px 0px 0px;
+        order: 1;
+       
+        
+        
+    }
+    .header-aside
+    {
+        display: flex;
+        justify-content: space-around;
+        
+        width: 100%;
+    }
+
+
+    .contenant-carte-aside
+    {
+        width: 70%;
+        height: 30%;
+    }
+
+
+    .images-seul2 
+    {       
+        width: 100%;
+        height: 160px ;
+    }
+
+    .images-seul2 img
+    {   
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /*partie activités*/
+
+    .activites
+    {   
+      
+        width: 95%;
+        order: 3;
+        height: 650px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: repeat(4,1fr);
+        row-gap: 10px;
+    }
+    .titre-activites
+    {
+        justify-self: start;
+    }
+    .contenant-carte3, .contenant-carte4
+    {   
+        
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80% 20%;
+        
+        
+        width: 300px;
+        height: 190px ;
+        border-radius: 20px 20px 20px 20px;
+        box-shadow: 2px 4px 4px #F2F2F2 ;
+        padding: 0px;
+        margin: 0px;
+        justify-self: center;
+      
+    }
+    .contenant-carte2
+    {
+        justify-self: center;
+    }
+    .contenant-carte2:nth-child(5) {grid-column: 1/2; grid-row: 2/3;}
+    .contenant-carte2:nth-child(2) {grid-column: 2/3; grid-row: 2/3;}
+    .contenant-carte2:nth-child(3) {grid-column: 1/2; grid-row: 4/5;} 
+    .contenant-carte2:nth-child(4) {grid-column: 2/3; grid-row: 4/5;}
+    .contenant-carte3{ grid-column: 1/2; grid-row: 3/4;}
+    .contenant-carte4{ grid-column: 2/3; grid-row: 3/4; }
+
+
+}
+
+@media screen and (max-width: 1010px)
+{
+    .hébergements 
+    {
+        width: 95%;
+        height: 1000px;
+        display: flex;
+        padding: 0px;
+        order: 2;
+       
+    }
+
+    .titre
+{
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+}
+
+@media screen and (max-width: 715px) /* partie horizontl*/
+{
+    body 
+    {
+        margin: 0px;
+    }
+
+    .Filtre
+{   
+    display: flex;
+    align-content: space-between;
+  
+    width: 100%;
+    height: 200px;
+}
+
+.ensemble-filtre:nth-child(1) /*on parle ici du l'item filtre qui ne comporte aucun icone dans le site*/
+{ 
+    display: flex; 
+    flex-basis: 100%;  
+   
+    justify-content: flex-end;       
+
+    align-items: center;
+    padding: 0px;
+}
+.titre-filtre1
+{   
+    flex-basis: 300px;
+    justify-content: flex-start;
+   
+}
+
+.hébergements 
+{
+    width: 95%;
+    height: 1500px;
+    display: flex;
+
+    order: 2;
+    margin-top: 0px;
+    
+}
+.titre
+{
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+.carte
+{       
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60% 15% 15% 10%;
+        height: 210px;
+        width: 350px;
+        border: solid white;
+        margin: 0px ;
+        padding: 0px;
+        border-radius: 20px 20px 20px 20px;
+        background-color: white;
+        box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
+
+}
+ 
+
+.image-seul img
+{
+    width: 350px;
+    object-fit: cover ;
+}
+
+.activites
+{   
+  
+    width: 95%;
+    order: 3;
+    height: 1250px;
+   
+  
+
+    display: grid;
+    grid-template-columns:1fr ;
+    grid-template-rows: 8fr;
+    row-gap: 10px;
+}
+.contenant-carte2:nth-child(5) {grid-column: 1/2; grid-row: 2/3;}
+.contenant-carte2:nth-child(2) {grid-column: 1/2; grid-row: 3/4;}
+.contenant-carte2:nth-child(3) {grid-column: 1/2; grid-row: 4/5;} 
+.contenant-carte2:nth-child(4) {grid-column: 1/2; grid-row: 5/6;}
+.contenant-carte3{ grid-column: 1/2; grid-row: 6/7;}
+.contenant-carte4{ grid-column: 1/2; grid-row: 7/8; }
+
+footer
+{   
+    height: 450px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 20px;
+
+}
+
+.menu2
+{
+    margin-left: 20px;
+}
+
+}
+
+
+@media screen and (max-width: 400px) /*partie smartphone*/
+{
+
+    /*partie recherche*/
+
+ .titre-recherche
+    {
+        font-size: large;
+    }
+
+ .localisation /*contenant de toute la barre de localisation*/
+{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0px 0px 30px 0px;
+    padding: 0px;
+    
+}
+
+.bare-localisation:nth-child(2)
+{   
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 0px 5px;
+    font-size: medium;
+    font-weight: bold;
+    border: 2px solid #F2F2F2;
+    height: 40px;
+    width: 250px;
+}
+
+.bare-localisation:nth-child(3)
+{
+        display:none;
+}
+
+.icone-recherche
+{
+        display: flex;
+        flex-flow: row;
+        height: 45px;
+        width: 45px;
+        justify-content: center ;
+        align-items: center;
+        background-color: #0065FC ;
+        font-size: small;
+        color: white;
+        border-radius: 10px;
+        border: 0px;
+}
+
+.description-filtre
+{
+    
+    width: 100%;
+    
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    flex-flow: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  
+   
+    
+    
+
+}
+.hébergements 
+{
+    width: 95%;
+    height: 1500px;
+    display: flex;
+    padding: 0px 20px 0px 20px;
+    order: 2;
+    background-color: white;
+    margin-top: 0px;
+    
+}
+.titre
+{
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+.carte
+{       
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 60% 15% 15% 10%;
+        height: 210px;
+        width: 300px;
+        border: solid white;
+        margin: 0px ;
+        padding: 0px;
+        border-radius: 20px 20px 20px 20px;
+        background-color: white;
+        box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
+
+}
+
+.image-seul img
+{
+    width: 300px;
+    object-fit: cover ;
+}
+    /*partie aside*/
+    .aside1
+{
+    border-radius: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}   
+
+.header-aside
+{
+    width: 80%;
+}
+
+.contenant-carte-aside
+{
+    width: 90%;
+    height: 30%;
+}
+
+}
