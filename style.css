@@ -38,6 +38,8 @@ p
 body 
 {
     margin: 0px;
+    border: solid;
+    
 }
 
 header
@@ -46,6 +48,7 @@ header
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 0px 20px 0px 20px;
+    border: solid;
 }
 
 .menu 
@@ -58,13 +61,13 @@ header
   
 }
 
-.logo{grid-column: 1/2;  grid-row: 1/2; display: flex; align-items: center; margin-left: 10px; border: none;}
-.logo img:hover{ border: none;}
-.onglet:nth-child(2){ grid-column: 2/3;  grid-row: 1/2;}
-.onglet:nth-child(3){ grid-column: 3/4;  grid-row: 1/2;}
-.onglet:nth-child(4){ color: #0065FC;  grid-column: 4/5;  grid-row: 1/2;}
+.menu__logo{grid-column: 1/2;  grid-row: 1/2; display: flex; align-items: center; margin-left: 10px; border: none;}
+.menu__logo img:hover{ border: none;}
+.menu__onglet:nth-child(2){ grid-column: 2/3;  grid-row: 1/2;}
+.menu__onglet:nth-child(3){ grid-column: 3/4;  grid-row: 1/2;}
+.menu__onglet:nth-child(4){ color: #0065FC;  grid-column: 4/5;  grid-row: 1/2;}
 
-.onglet
+.menu__onglet
 {   
     display: flex;
     font-size: medium;
@@ -74,32 +77,26 @@ header
     
 }
 
-
-.onglet:hover{  color: #0065FC; border-top: #0065FC solid;}
-
+.menu__onglet:hover{  color: #0065FC; border-top: #0065FC solid;}
 
 
-
-.recherche /*partie recherche du bloc main*/
+.recherche
 {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: left;
-    width: 95%;
-    
-    
+    width: 100%;
 }
 
- .titre-recherche
+.recherche__titre /*partie recherche du bloc main*/
+{
+    width: 90%;
+ 
+}
+
+ .recherche__sous-titre
  {
      margin-bottom: 10px;
- }
-
- .sous-titre-recherche 
- {
-    
      margin-top: 0px;
  }
+
 
 .localisation
 {
@@ -108,80 +105,71 @@ header
     align-items: center;
     justify-content: flex-start;
     width: 90%;
-    
+    border: solid;
     margin-bottom: 5px;
     margin-top: 0px;
     
 }
 
+.localisation__bare
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+    font-weight: bold;
+    border: 2px solid #F2F2F2 ;
+    padding: 0px;
+    
+    
 
-.bare-localisation img /*petite icone de localisation*/
+}
+.localisation__bare img /*petite icone de localisation*/
 {
     width: 20px;
     height: 20px;
     background-color: #F2F2F2 ;
 }
 
-.bare-localisation:nth-child(1)
+.localisation__bare:nth-child(1)
 {   
     border-radius: 10px 0px 0px 10px;
     width: 40px;
     height: 40px;
-    border: 2px solid #F2F2F2 ;
-    background-color: #F2F2F2;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-
+    background-color: #F2F2F2 ;
 }
 
-.bare-localisation:nth-child(2)
+.localisation__bare:nth-child(2)
 {   
-    display: flex;
     justify-content: flex-start;
-    align-items: center;
     padding: 0px 0px 0px 5px;
-    font-size: medium;
-    font-weight: bold;
-    border: 2px solid #F2F2F2;
     height: 40px;
-    width: 200px;
+    width: 210px;
 }
 
-.bare-localisation:nth-child(3) /*partie bleu qui inclut le texte recherche dans la barre de localisation*/
+.localisation__bare:nth-child(3) /*partie bleu qui inclut le texte recherche dans la barre de localisation*/
 {   
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0px;
-    font-size: medium;
-    font-weight: bold;
     border-radius: 0px 10px 10px 0px;
     background-color: #0065FC;
     height: 40px;
-    border: 2px solid #0065FC;
+    
     width: 120px;
     color: white;
 }
-.icone-recherche
+.localisation__icone
 {
     display: none;
 }
 
 
 .Filtre  /*/section filtre en dessous de la bare de recherche séparé en 4 ensemble de filtre*/
-{
-    
+{  
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
     width: 70%;
     margin: 0px;
- 
- 
 }
 
 .ensemble-filtre
@@ -419,7 +407,7 @@ main
 .etoiles
 {   
     display: flex;
-    flex-grow: row ;
+   flex-direction: row ;
     justify-content: flex-start;
     height: 10px;
     align-items: center;
@@ -728,10 +716,7 @@ li
 
 @media screen and (max-width: 1200px) /*/parti responsive pour les tablettes*/
 {   
-    body 
-    {
-        margin: 0px;
-    }
+
     header
     {
         
@@ -752,14 +737,14 @@ li
        
     }
 
-    .logo{ align-self: flex-start;  grid-column: 1/2; grid-row: 1/2;}
-    .onglet:nth-child(2){ grid-column: 1/2; grid-row: 2/3; border-bottom: #F2F2F2 solid; }
-    .onglet:nth-child(3){ grid-column: 2/3; grid-row: 2/3; border-bottom: #F2F2F2 solid; }
-    .onglet:nth-child(4){ grid-column: 2/3; grid-row: 1/2; justify-content: flex-end; border-top: none ; font-weight: bold; margin-right: 10px;}
+    .menu__logo{ align-self: flex-start;  grid-column: 1/2; grid-row: 1/2;}
+    .menu__onglet:nth-child(2){ grid-column: 1/2; grid-row: 2/3; border-bottom: #F2F2F2 solid; }
+    .menu__onglet:nth-child(3){ grid-column: 2/3; grid-row: 2/3; border-bottom: #F2F2F2 solid; }
+    .menu__onglet:nth-child(4){ grid-column: 2/3; grid-row: 1/2; justify-content: flex-end; border-top: none ; font-weight: bold; margin-right: 10px;}
 
-    .onglet:nth-child(2):hover { border-bottom: solid #0065FC; border-top: none ;} 
-    .onglet:nth-child(3):hover { border-bottom: solid #0065FC; border-top: none ;}
-    .onglet:nth-child(4):hover {border-top: none ;} /*disparition des bordures losque l'on passe au dessus en version tablette*/
+    .menu__onglet:nth-child(2):hover { border-bottom: solid #0065FC; border-top: none ;} 
+    .menu__onglet:nth-child(3):hover { border-bottom: solid #0065FC; border-top: none ;}
+    .menu__onglet:nth-child(4):hover {border-top: none ;} /*disparition des bordures losque l'on passe au dessus en version tablette*/
 
     /* partie de la bare de recherche  compléter par l'agrandissement de la taille du conteneur*/
 
@@ -830,8 +815,6 @@ li
         align-content:space-around ;
         width: 95%;
         height: 650px;
-        margin-left: 0px;
-        margin-right: 0px;
         padding: 0px 0px 0px 0px;
         order: 1;
        
@@ -919,7 +902,7 @@ li
 {
     .hébergements 
     {
-        width: 95%;
+        width: 90%;
         height: 1000px;
         display: flex;
         padding: 0px;
@@ -937,10 +920,7 @@ li
 
 @media screen and (max-width: 715px) /* partie horizontl*/
 {
-    body 
-    {
-        margin: 0px;
-    }
+
 
     .Filtre
 {   
@@ -1029,6 +1009,7 @@ li
 
 footer
 {   
+    width: 100%;
     height: 450px;
     display: flex;
     flex-flow: column;
@@ -1051,7 +1032,12 @@ footer
 
     /*partie recherche*/
 
- .titre-recherche
+.recherche
+{
+    border: solid;
+}
+
+ .recherche__titre
     {
         font-size: large;
     }
@@ -1068,25 +1054,17 @@ footer
     
 }
 
-.bare-localisation:nth-child(2)
+.localisation__bare:nth-child(2)
 {   
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 0px 0px 0px 5px;
-    font-size: medium;
-    font-weight: bold;
-    border: 2px solid #F2F2F2;
-    height: 40px;
-    width: 250px;
+    width: 260px;
 }
 
-.bare-localisation:nth-child(3)
+.localisation__bare:nth-child(3)
 {
         display:none;
 }
 
-.icone-recherche
+.localisation__icone
 {
         display: flex;
         flex-flow: row;
@@ -1119,7 +1097,7 @@ footer
 }
 .hébergements 
 {
-    width: 95%;
+    width: 100%;
     height: 1500px;
     display: flex;
     padding: 0px 20px 0px 20px;
@@ -1156,7 +1134,8 @@ footer
 }
     /*partie aside*/
     .aside1
-{
+{   
+    width: 100%;
     border-radius: 0px;
     margin-left: 0px;
     margin-right: 0px;
