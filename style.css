@@ -38,8 +38,6 @@ p
 body 
 {
     margin: 0px;
-    border: solid;
-    
 }
 
 header
@@ -48,7 +46,6 @@ header
     flex-flow: row wrap;
     justify-content: space-around;
     padding: 0px 20px 0px 20px;
-    border: solid;
 }
 
 .menu 
@@ -77,22 +74,26 @@ header
     
 }
 
-.menu__onglet:hover{  color: #0065FC; border-top: #0065FC solid;}
+.menu__onglet:hover{  color: #0065FC; border-top: solid;}
 
 
 .recherche
 {
     width: 100%;
+    padding-left: 20px;
+    
 }
 
 .recherche__titre /*partie recherche du bloc main*/
 {
-    width: 90%;
+    width: 100%;
  
 }
 
  .recherche__sous-titre
- {
+ {  
+     width: 100%;
+    
      margin-bottom: 10px;
      margin-top: 0px;
  }
@@ -105,7 +106,6 @@ header
     align-items: center;
     justify-content: flex-start;
     width: 90%;
-    border: solid;
     margin-bottom: 5px;
     margin-top: 0px;
     
@@ -922,7 +922,8 @@ li
 {
 
 
-    .Filtre
+
+.Filtre
 {   
     display: flex;
     align-content: space-between;
@@ -1032,31 +1033,35 @@ footer
 
     /*partie recherche*/
 
-.recherche
-{
-    border: solid;
-}
-
- .recherche__titre
+    .recherche
     {
+        padding: 0px;
+    }
+    .recherche__titre 
+    {
+        width: 90%;
+        padding-left: 10px;
         font-size: large;
     }
+    .recherche__sous-titre
+    {
+        padding-left: 10px;
+    }
 
- .localisation /*contenant de toute la barre de localisation*/
+    
+  /*contenant de toute la barre de localisation*/
+  .localisation
 {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    margin: 0px 0px 30px 0px;
-    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     
 }
 
 .localisation__bare:nth-child(2)
 {   
-    width: 260px;
+    width: 210px;
 }
 
 .localisation__bare:nth-child(3)
@@ -1099,11 +1104,10 @@ footer
 {
     width: 100%;
     height: 1500px;
-    display: flex;
-    padding: 0px 20px 0px 20px;
     order: 2;
     background-color: white;
     margin-top: 0px;
+    
     
 }
 .titre
