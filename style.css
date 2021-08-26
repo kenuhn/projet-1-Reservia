@@ -162,7 +162,7 @@ header
 }
 
 
-.Filtre  /*/section filtre en dessous de la bare de recherche séparé en 4 ensemble de filtre*/
+.filtre  /*/section filtre en dessous de la bare de recherche séparé en 4 ensemble de filtre*/
 {  
     display: flex;
     flex-flow: row wrap;
@@ -751,7 +751,7 @@ li
     
     /*partie filtres passage en dessous des élément flexibles.*/
 
-    .Filtre
+    .filtre
     {   
         display: flex;
         align-content: space-between;
@@ -923,7 +923,7 @@ li
 
 
 
-.Filtre
+.filtre
 {   
     display: flex;
     align-content: space-between;
