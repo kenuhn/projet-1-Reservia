@@ -63,6 +63,7 @@ header
 .onglet:nth-child(2){ grid-column: 2/3;  grid-row: 1/2;}
 .onglet:nth-child(3){ grid-column: 3/4;  grid-row: 1/2;}
 .onglet:nth-child(4){ color: #0065FC;  grid-column: 4/5;  grid-row: 1/2;}
+
 .onglet
 {   
     display: flex;
@@ -70,12 +71,12 @@ header
     justify-content: center;
     align-items: center;
     
+    
 }
 
 
-.onglet:nth-child(2):hover{  color: #0065FC; border-top: #0065FC solid;}
-.onglet:nth-child(3):hover{  color: #0065FC; border-top: #0065FC solid;}
-.onglet:nth-child(4):hover{color: #0065FC;  border-top: #0065FC solid;}
+.onglet:hover{  color: #0065FC; border-top: #0065FC solid;}
+
 
 
 
