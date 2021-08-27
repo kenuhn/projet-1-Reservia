@@ -357,7 +357,7 @@ main
     width: 250px;
     height: 100%;
     border-radius: 20px 20px 0px 0px;
-    
+    cursor: pointer;
     
 }
 
@@ -464,7 +464,7 @@ main
     border-radius: 20px;
     border: transparent solid;
     box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
-
+    cursor: pointer;
 }
 
 .images-seul2 img /*contenant des images*/
@@ -594,7 +594,7 @@ grid-column-gap: 20px;
     border-radius: 20px 20px 20px 20px;
     padding: 0px;
     margin: 0px;
-   
+    cursor: pointer;
 
 
 }
@@ -632,7 +632,7 @@ grid-column-gap: 20px;
     border-radius: 20px 20px 20px 20px;
     padding: 0px;
     margin: 0px;
-   
+    cursor: pointer;
 }
 
 .grande-image img
