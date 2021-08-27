@@ -708,6 +708,7 @@ li
 {
     font-size:medium;
     padding: 0px;
+    margin-bottom: 5px;
 }
 
 
@@ -967,6 +968,8 @@ li
 .carte
 {       
         width: 350px;
+        margin: 0px ;
+        padding: 0px;
 }
  
 
