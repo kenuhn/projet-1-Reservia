@@ -331,7 +331,7 @@ main
         grid-template-rows: 60% 15% 15% 10%;
         height: 210px;
         width: 250px;
-        border: solid white;
+        border: solid transparent;
         margin: 0px ;
         padding: 0px;
         border-radius: 20px 20px 20px 20px;
@@ -461,7 +461,7 @@ main
     width: 350px;
     background-color: white;
     border-radius: 20px;
-    border: white solid;
+    border: transparent solid;
     box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
 
 }
@@ -742,8 +742,8 @@ li
     .menu__onglet:nth-child(3){ grid-column: 2/3; grid-row: 2/3; border-bottom: #F2F2F2 solid; }
     .menu__onglet:nth-child(4){ grid-column: 2/3; grid-row: 1/2; justify-content: flex-end; border-top: none ; font-weight: bold; margin-right: 10px;}
 
-    .menu__onglet:nth-child(2):hover { border-bottom: solid #0065FC; border-top: none ;} 
-    .menu__onglet:nth-child(3):hover { border-bottom: solid #0065FC; border-top: none ;}
+    .menu__onglet:nth-child(2):hover { border-bottom: solid; border-top: none ;} 
+    .menu__onglet:nth-child(3):hover { border-bottom: solid; border-top: none ;}
     .menu__onglet:nth-child(4):hover {border-top: none ;} /*disparition des bordures losque l'on passe au dessus en version tablette*/
 
     /* partie de la bare de recherche  compléter par l'agrandissement de la taille du conteneur*/
@@ -966,18 +966,7 @@ li
 }
 .carte
 {       
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 60% 15% 15% 10%;
-        height: 210px;
         width: 350px;
-        border: solid white;
-        margin: 0px ;
-        padding: 0px;
-        border-radius: 20px 20px 20px 20px;
-        background-color: white;
-        box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
-
 }
  
 
@@ -1117,18 +1106,10 @@ footer
 }
 .carte
 {       
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 60% 15% 15% 10%;
-        height: 210px;
         width: 300px;
-        border: solid white;
+        border: solid transparent;
         margin: 0px ;
         padding: 0px;
-        border-radius: 20px 20px 20px 20px;
-        background-color: white;
-        box-shadow: 2px 2px 5px rgb(221, 221, 221) ;
-
 }
 
 .image-seul img
@@ -1137,7 +1118,7 @@ footer
     object-fit: cover ;
 }
     /*partie aside*/
-    .aside1
+.aside1
 {   
     width: 100%;
     border-radius: 0px;
