@@ -16,7 +16,10 @@
     list-style: none;
 }
 
-
+#wrapper{
+    margin:0 auto;
+    max-width: 1480px;
+}
 
 h2 
 {
@@ -70,8 +73,7 @@ header
     font-size: medium;
     justify-content: center;
     align-items: center;
-    
-    
+    cursor: pointer;
 }
 
 .menu__onglet:hover{  color: #0065FC; border-top: solid;}
@@ -408,7 +410,7 @@ main
 .etoiles
 {   
     display: flex;
-   flex-direction: row ;
+    flex-direction: row ;
     justify-content: flex-start;
     height: 10px;
     align-items: center;
