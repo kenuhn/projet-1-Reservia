@@ -401,10 +401,12 @@ main
 .couleur-bleu
 {
     color: #0065FC;
+    font-size: small;
 }
 .couleur-gris
 {
     color:gray;
+    font-size: small;
 }
 
 .etoiles
